@@ -30,6 +30,6 @@ A sample blog page that demonstrates the accessing of github meta data.
 * BaseURL : {{ site.github.baseurl }}
 * Archived : {{ site.github.archived}}
 * Contributors :
-{% for contributor in site.github.contributors %}
+{ % for contributor in site.github.contributors % }
   * {{ contributor.login }}
-{% endfor %}
+{ % endfor % }
