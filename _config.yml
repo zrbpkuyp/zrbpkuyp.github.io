@@ -4,7 +4,7 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Runbo
-middle_name: R.
+middle_name:
 last_name: Zhang
 email: zrbpkuyp@stu.pku.edu.cn
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -312,7 +312,7 @@ external_links:
 # -----------------------------------------------------------------------------
 
 imagemagick:
-  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+  enabled: false # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
   widths:
     - 480
     - 800
