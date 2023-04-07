@@ -5,17 +5,17 @@
   <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
 <body>
 <p>
-  { %- if page.redirect -% }
+  [%- if page.redirect -%]
     <meta http-equiv="refresh" content="3; url=/">
-  { %- endif -% }
-  { % include head.html % }
+  [%- endif -%]
+  [% include head.html %]
   
 
   <!-- Body -->
   </p>
 
     <!-- Header -->
-    { %- include header.html % }
+    [%- include header.html %]
 
     <!-- Content -->
     <div class="container mt-5">
@@ -23,30 +23,30 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">cv { % if page.cv_pdf % }<a href="/assets/pdf/example_pdf.pdf" target="_blank" rel="noopener noreferrer" class="float-right"><i class="fas fa-file-pdf"></i></a>{ % endif % }</h1>
+            <h1 class="post-title">cv [% if page.cv_pdf %]<a href="/assets/pdf/example_pdf.pdf" target="_blank" rel="noopener noreferrer" class="float-right"><i class="fas fa-file-pdf"></i></a>[% endif %]</h1>
             <p class="post-description"></p>
           </header>
 
           <article>
             <div class="cv">
-              { % for entry in site.data.cv % }
+              [% for entry in site.data.cv %]
                 <div class="card mt-3 p-3">
                   <h3 class="card-title font-weight-medium"></h3>
                   <div>
-                  { % if entry.type == "list" % }
-                    { % include cv/list.html % }
-                  { % elsif entry.type == "map" % }
-                    { % include cv/map.html % }
-                  { % elsif entry.type == "nested_list" % }
-                    { % include cv/nested_list.html % }
-                  { % elsif entry.type == "time_table" % }
-                   { % include cv/time_table.html % }
-                  { % else % }
+                  [% if entry.type == "list" %]
+                    [% include cv/list.html %]
+                  [% elsif entry.type == "map" %]
+                    [% include cv/map.html %]
+                  [% elsif entry.type == "nested_list" %]
+                    [% include cv/nested_list.html %]
+                  [% elsif entry.type == "time_table" %]
+                   [% include cv/time_table.html %]
+                  [% else %]
                     
-                  { % endif % }
+                  [% endif %]
                   </div>
                 </div>
-              { % endfor % }
+              [% endfor %]
               </div>
           </article>
 
@@ -55,17 +55,17 @@
     </div>
 
     <!-- Footer -->
-    { %- include footer.html % }
+    [%- include footer.html %]
 
     <!-- JavaScripts -->
-    { % include scripts/jquery.html % }
-    { % include scripts/bootstrap.html % }
-    { % include scripts/masonry.html % }
-    { % include scripts/misc.html % }
-    { % include scripts/badges.html % }
-    { % include scripts/mathjax.html % }
-    { % include scripts/analytics.html % }
-    { % include scripts/progressBar.html % }
+    [% include scripts/jquery.html %]
+    [% include scripts/bootstrap.html %]
+    [% include scripts/masonry.html %]
+    [% include scripts/misc.html %]
+    [% include scripts/badges.html %]
+    [% include scripts/mathjax.html %]
+    [% include scripts/analytics.html %]
+    [% include scripts/progressBar.html %]
   
 </body>
 </html>

@@ -5,17 +5,17 @@
   <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
 <body>
 <p>
-  { %- if page.redirect -% }
+  [%- if page.redirect -%]
     <meta http-equiv="refresh" content="3; url=/">
-  { %- endif -% }
-  { % include head.html % }
+  [%- endif -%]
+  [% include head.html %]
   
 
   <!-- Body -->
   </p>
 
     <!-- Header -->
-    { %- include header.html % }
+    [%- include header.html %]
 
     <!-- Content -->
     <div class="container mt-5">
@@ -31,10 +31,10 @@
             <!-- _pages/publications.md -->
 <div class="publications">
 
-{ %- for y in page.years % }
+[%- for y in page.years %]
   <h2 class="year"></h2>
-  { % bibliography -f papers -q @*[year=]* % }
-{ % endfor % }
+  [% bibliography -f papers -q @*[year=]* %]
+[% endfor %]
 
 </div>
 
@@ -45,17 +45,17 @@
     </div>
 
     <!-- Footer -->
-    { %- include footer.html % }
+    [%- include footer.html %]
 
     <!-- JavaScripts -->
-    { % include scripts/jquery.html % }
-    { % include scripts/bootstrap.html % }
-    { % include scripts/masonry.html % }
-    { % include scripts/misc.html % }
-    { % include scripts/badges.html % }
-    { % include scripts/mathjax.html % }
-    { % include scripts/analytics.html % }
-    { % include scripts/progressBar.html % }
+    [% include scripts/jquery.html %]
+    [% include scripts/bootstrap.html %]
+    [% include scripts/masonry.html %]
+    [% include scripts/misc.html %]
+    [% include scripts/badges.html %]
+    [% include scripts/mathjax.html %]
+    [% include scripts/analytics.html %]
+    [% include scripts/progressBar.html %]
   
 </body>
 </html>

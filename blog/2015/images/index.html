@@ -5,54 +5,54 @@
   <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
 <body>
 <p>
-  { %- if page.redirect -% }
+  [%- if page.redirect -%]
     <meta http-equiv="refresh" content="3; url=/">
-  { %- endif -% }
-  { % include head.html % }
+  [%- endif -%]
+  [% include head.html %]
   
 
   <!-- Body -->
   </p>
 
     <!-- Header -->
-    { %- include header.html % }
+    [%- include header.html %]
 
     <!-- Content -->
     <div class="container mt-5">
       <!-- _layouts/post.html -->
-{ %- assign year = page.date | date: "%Y" -% }
-{ %- assign tags = page.tags | join: "" -% }
-{ %- assign categories = page.categories | join: "" -% }
+[%- assign year = page.date | date: "%Y" -%]
+[%- assign tags = page.tags | join: "" -%]
+[%- assign categories = page.categories | join: "" -%]
 
-{ % if page._styles % }
+[% if page._styles %]
 <!-- Page/Post style -->
 <style type="text/css">
   
 </style>
-{ % endif % }
+[% endif %]
 
 <div class="post">
 
   <header class="post-header">
     <h1 class="post-title">a post with images</h1>
-    <p class="post-meta">May 15, 2015{ %- if page.author -% } • { %- endif -% }{ %- if page.meta -% } • { %- endif -% }</p>
+    <p class="post-meta">May 15, 2015[%- if page.author -%] • [%- endif -%][%- if page.meta -%] • [%- endif -%]</p>
     <p class="post-tags">
       <a href="/blog/"> <i class="fas fa-calendar fa-sm"></i>  </a>
-      { %- if tags != "" % }
+      [%- if tags != "" %]
         ·  
-        { % for tag in page.tags -% }
+        [% for tag in page.tags -%]
         <a href="/blog/tag/">
           <i class="fas fa-hashtag fa-sm"></i> </a>  
-          { % endfor -% }
-      { % endif % }
+          [% endfor -%]
+      [% endif %]
 
-      { %- if categories != "" % }
+      [%- if categories != "" %]
         ·  
-        { % for category in page.categories -% }
+        [% for category in page.categories -%]
         <a href="/blog/category/">
           <i class="fas fa-tag fa-sm"></i> </a>  
-          { % endfor -% }
-      { % endif % }
+          [% endfor -%]
+      [% endif %]
 
     </p>
   </header>
@@ -62,10 +62,10 @@
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        { % include figure.html path="assets/img/9.jpg" class="img-fluid rounded z-depth-1" % }
+        [% include figure.html path="assets/img/9.jpg" class="img-fluid rounded z-depth-1" %]
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        { % include figure.html path="assets/img/7.jpg" class="img-fluid rounded z-depth-1" % }
+        [% include figure.html path="assets/img/7.jpg" class="img-fluid rounded z-depth-1" %]
     </div>
 </div>
 <div class="caption">
@@ -77,10 +77,10 @@ Simply add <code class="language-plaintext highlighter-rouge">data-zoomable</cod
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        { % include figure.html path="assets/img/8.jpg" class="img-fluid rounded z-depth-1" zoomable=true % }
+        [% include figure.html path="assets/img/8.jpg" class="img-fluid rounded z-depth-1" zoomable=true %]
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        { % include figure.html path="assets/img/10.jpg" class="img-fluid rounded z-depth-1" zoomable=true % }
+        [% include figure.html path="assets/img/10.jpg" class="img-fluid rounded z-depth-1" zoomable=true %]
     </div>
 </div>
 
@@ -88,47 +88,47 @@ Simply add <code class="language-plaintext highlighter-rouge">data-zoomable</cod
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        { % include figure.html path="assets/img/11.jpg" class="img-fluid rounded z-depth-1" zoomable=true % }
+        [% include figure.html path="assets/img/11.jpg" class="img-fluid rounded z-depth-1" zoomable=true %]
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        { % include figure.html path="assets/img/12.jpg" class="img-fluid rounded z-depth-1" zoomable=true % }
+        [% include figure.html path="assets/img/12.jpg" class="img-fluid rounded z-depth-1" zoomable=true %]
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        { % include figure.html path="assets/img/7.jpg" class="img-fluid rounded z-depth-1" zoomable=true % }
+        [% include figure.html path="assets/img/7.jpg" class="img-fluid rounded z-depth-1" zoomable=true %]
     </div>
 </div>
 
   </article>
 
-  { %- if site.related_blog_posts.enabled -% }
-    { %- if page.related_posts == null or page.related_posts -% }
-      { % include related_posts.html % }
-    { %- endif % }
-  { %- endif % }
+  [%- if site.related_blog_posts.enabled -%]
+    [%- if page.related_posts == null or page.related_posts -%]
+      [% include related_posts.html %]
+    [%- endif %]
+  [%- endif %]
 
-  { %- if site.disqus_shortname and page.disqus_comments -% }
-    { % include disqus.html % }
-  { %- endif % }
-  { %- if site.giscus.repo and page.giscus_comments -% }
-    { % include giscus.html % }
-  { %- endif -% }
+  [%- if site.disqus_shortname and page.disqus_comments -%]
+    [% include disqus.html %]
+  [%- endif %]
+  [%- if site.giscus.repo and page.giscus_comments -%]
+    [% include giscus.html %]
+  [%- endif -%]
 
 </div>
 
     </div>
 
     <!-- Footer -->
-    { %- include footer.html % }
+    [%- include footer.html %]
 
     <!-- JavaScripts -->
-    { % include scripts/jquery.html % }
-    { % include scripts/bootstrap.html % }
-    { % include scripts/masonry.html % }
-    { % include scripts/misc.html % }
-    { % include scripts/badges.html % }
-    { % include scripts/mathjax.html % }
-    { % include scripts/analytics.html % }
-    { % include scripts/progressBar.html % }
+    [% include scripts/jquery.html %]
+    [% include scripts/bootstrap.html %]
+    [% include scripts/masonry.html %]
+    [% include scripts/misc.html %]
+    [% include scripts/badges.html %]
+    [% include scripts/mathjax.html %]
+    [% include scripts/analytics.html %]
+    [% include scripts/progressBar.html %]
   
 </body>
 </html>

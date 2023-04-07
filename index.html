@@ -5,17 +5,17 @@
   <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
 <body>
 <p>
-  { %- if page.redirect -% }
+  [%- if page.redirect -%]
     <meta http-equiv="refresh" content="3; url=/">
-  { %- endif -% }
-  { % include head.html % }
+  [%- endif -%]
+  [% include head.html %]
   
 
   <!-- Body -->
   </p>
 
     <!-- Header -->
-    { %- include header.html % }
+    [%- include header.html %]
 
     <!-- Content -->
     <div class="container mt-5">
@@ -23,36 +23,36 @@
       <div class="post">
         <header class="post-header">
           <h1 class="post-title">
-           { % if site.title == "blank" -% }<span class="font-weight-bold">Runbo</span>  Zhang{ %- else -% }blank{ %- endif % }
+           [% if site.title == "blank" -%]<span class="font-weight-bold">Runbo</span>  Zhang[%- else -%]blank[%- endif %]
           </h1>
           <p class="desc"><a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.</p>
         </header>
 
         <article>
-          { % if page.profile -% }
-          <div class="profile float-{ %- if page.profile.align == 'left' -% }left{ %- else -% }right{ %- endif -% }">
-            { %- if page.profile.image % }
-              { %- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -% }
+          [% if page.profile -%]
+          <div class="profile float-[%- if page.profile.align == 'left' -%]left[%- else -%]right[%- endif -%]">
+            [%- if page.profile.image %]
+              [%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%]
 
-              { % if page.profile.image_circular % }
-                { %- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -% }
-              { % else % }
-                { %- assign profile_image_class = "img-fluid z-depth-1 rounded" -% }
-              { % endif % }
+              [% if page.profile.image_circular %]
+                [%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%]
+              [% else %]
+                [%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%]
+              [% endif %]
 
-              { % include figure.html 
+              [% include figure.html 
               path=profile_image_path 
               class=profile_image_class
-              alt=page.profile.image -% }
-            { % endif -% }
-            { %- if page.profile.address % }
+              alt=page.profile.image -%]
+            [% endif -%]
+            [%- if page.profile.address %]
             <div class="address">
               <p>555 your office number</p> <p>123 your address street</p> <p>Your City, State 12345</p>
 
             </div>
-            { %- endif % }
+            [%- endif %]
           </div>
-          { %- endif % }
+          [%- endif %]
 
           <div class="clearfix">
             <p>Write your biography here. Tell the world about yourself. Link to your favorite <a href="http://reddit.com" rel="external nofollow noopener" target="_blank">subreddit</a>. You can put a picture in, too. The code is already in, just name your picture <code class="language-plaintext highlighter-rouge">prof_pic.jpg</code> and put it in the <code class="language-plaintext highlighter-rouge">img/</code> folder.</p>
@@ -64,22 +64,22 @@
           </div>
 
           <!-- News -->
-          { % if page.news -% }
+          [% if page.news -%]
             <h2><a href="/news/" style="color: inherit;">news</a></h2>
-            { %- include news.html % }
-          { %- endif % }
+            [%- include news.html %]
+          [%- endif %]
 
           <!-- Selected papers -->
-          { % if page.selected_papers -% }
+          [% if page.selected_papers -%]
             <h2><a href="/publications/" style="color: inherit;">selected publications</a></h2>
-            { %- include selected_papers.html % }
-          { %- endif % }
+            [%- include selected_papers.html %]
+          [%- endif %]
 
           <!-- Social -->
-          { %- if page.social % }
+          [%- if page.social %]
             <div class="social">
               <div class="contact-icons">
-                { % include social.html % }
+                [% include social.html %]
               </div>
 
               <div class="contact-note">
@@ -88,7 +88,7 @@
               </div>
               
             </div>
-          { %- endif % }
+          [%- endif %]
         </article>
 
 </div>
@@ -96,17 +96,17 @@
     </div>
 
     <!-- Footer -->
-    { %- include footer.html % }
+    [%- include footer.html %]
 
     <!-- JavaScripts -->
-    { % include scripts/jquery.html % }
-    { % include scripts/bootstrap.html % }
-    { % include scripts/masonry.html % }
-    { % include scripts/misc.html % }
-    { % include scripts/badges.html % }
-    { % include scripts/mathjax.html % }
-    { % include scripts/analytics.html % }
-    { % include scripts/progressBar.html % }
+    [% include scripts/jquery.html %]
+    [% include scripts/bootstrap.html %]
+    [% include scripts/masonry.html %]
+    [% include scripts/misc.html %]
+    [% include scripts/badges.html %]
+    [% include scripts/mathjax.html %]
+    [% include scripts/analytics.html %]
+    [% include scripts/progressBar.html %]
   
 </body>
 </html>

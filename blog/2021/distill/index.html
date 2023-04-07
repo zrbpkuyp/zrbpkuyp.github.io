@@ -3,15 +3,15 @@
   <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
 <body>
 <p>
-    { %- include head.html % }
+    [%- include head.html %]
 
-    { % include scripts/jquery.html % }
-    { % include scripts/mathjax.html % }
+    [% include scripts/jquery.html %]
+    [% include scripts/mathjax.html %]
     <!-- Distill js -->
     <script src="/assets/js/distillpub/template.v2.js"></script>
     <script src="/assets/js/distillpub/transforms.v2.js"></script>
     <script src="/assets/js/distillpub/overrides.js"></script>
-    { % if page._styles % }
+    [% if page._styles %]
     <!-- Page/Post style -->
     <style type="text/css">
       .fake-img {
@@ -29,7 +29,7 @@
 }
 
     </style>
-    { %- endif % }
+    [%- endif %]
   
 
   <d-front-matter>
@@ -38,7 +38,7 @@
       "description": "an example of a distill-style blog post and main elements",
       "published": "May 22, 2021",
       "authors": [
-        { % for author in page.authors -% }
+        [% for author in page.authors -%]
         {
           "author": "",
           "authorURL": "",
@@ -48,8 +48,8 @@
               "url": ""
             }
           ]
-        }{ % if forloop.last == false % },{ % endif % }
-        { % endfor % }
+        }[% if forloop.last == false %],[% endif %]
+        [% endfor %]
       ],
       "katex": {
         "delimiters": [
@@ -71,7 +71,7 @@
   </p>
 
     <!-- Header -->
-    { %- include header.html % }
+    [%- include header.html %]
 
     <!-- Content -->
     <div class="post distill">
@@ -84,23 +84,23 @@
       <d-byline></d-byline>
 
       <d-article>
-        { % if page.toc -% }
+        [% if page.toc -%]
         <d-contents>
           <nav class="l-text figcaption">
           <h3>Contents</h3>
-            { % for section in page.toc -% }
+            [% for section in page.toc -%]
             <div><a href="#"></a></div>
-            { % if section.subsections -% }
+            [% if section.subsections -%]
             <ul>
-              { % for subsection in section.subsections -% }
+              [% for subsection in section.subsections -%]
               <li><a href="#"></a></li>
-              { % endfor % }
+              [% endfor %]
             </ul>
-            { %- endif -% }
-            { %- endfor % }
+            [%- endif -%]
+            [%- endfor %]
           </nav>
         </d-contents>
-        { %- endif % }
+        [%- endif %]
 
         <h2 id="equations">Equations</h2>
 
@@ -154,12 +154,12 @@ For larger blocks of code, add a <code class="language-plaintext highlighter-rou
 <p><strong>Note:</strong> <code class="language-plaintext highlighter-rouge">&lt;d-code&gt;</code> blocks do not look good in the dark mode.
 You can always use the default code-highlight using the <code class="language-plaintext highlighter-rouge">highlight</code> liquid tag:</p>
 
-<p>{ % highlight javascript % }
+<p>[% highlight javascript %]
 var x = 25;
 function(x) {
   return x * x;
 }
-{ % endhighlight % }</p>
+[% endhighlight %]</p>
 
 <hr>
 
@@ -174,7 +174,7 @@ function(x) {
 <p>The plot must be generated separately and saved into an HTML file.
 To generate the plot that you see above, you can use the following code snippet:</p>
 
-<p>{ % highlight python % }
+<p>[% highlight python %]
 import pandas as pd
 import plotly.express as px
 df = pd.read_csv(
@@ -192,7 +192,7 @@ fig = px.density_mapbox(
 )
 fig.show()
 fig.write_html(‘assets/plotly/demo.html’)
-{ % endhighlight % }</p>
+[% endhighlight %]</p>
 
 <hr>
 
@@ -395,21 +395,21 @@ This line is only separated by a single newline, so it’s a separate line in th
 
       <d-bibliography src="/assets/bibliography/2018-12-22-distill.bib"></d-bibliography>
 
-      { %- if site.disqus_shortname and page.disqus_comments -% }
-        { % include disqus.html % }
-      { %- endif % }
-      { %- if site.giscus.repo and page.giscus_comments -% }
-        { % include giscus.html % }
-      { %- endif -% }
+      [%- if site.disqus_shortname and page.disqus_comments -%]
+        [% include disqus.html %]
+      [%- endif %]
+      [%- if site.giscus.repo and page.giscus_comments -%]
+        [% include giscus.html %]
+      [%- endif -%]
 
     </div>
 
     <!-- Footer -->
-    { %- include footer.html % }
+    [%- include footer.html %]
 
-    { % include scripts/bootstrap.html % }
-    { % include scripts/analytics.html % }
-    { % include scripts/progressBar.html % }
+    [% include scripts/bootstrap.html %]
+    [% include scripts/analytics.html %]
+    [% include scripts/progressBar.html %]
   
 </body>
 </html>

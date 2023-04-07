@@ -5,17 +5,17 @@
   <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
 <body>
 <p>
-  { %- if page.redirect -% }
+  [%- if page.redirect -%]
     <meta http-equiv="refresh" content="3; url=/">
-  { %- endif -% }
-  { % include head.html % }
+  [%- endif -%]
+  [% include head.html %]
   
 
   <!-- Body -->
   </p>
 
     <!-- Header -->
-    { %- include header.html % }
+    [%- include header.html %]
 
     <!-- Content -->
     <div class="container mt-5">
@@ -30,39 +30,39 @@
           <article>
             <h2 id="github-users">GitHub users</h2>
 
-<p>{ % if site.data.repositories.github_users % }</p>
+<p>[% if site.data.repositories.github_users %]</p>
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  { % for user in site.data.repositories.github_users % }
-    { % include repository/repo_user.html username=user % }
-  { % endfor % }
+  [% for user in site.data.repositories.github_users %]
+    [% include repository/repo_user.html username=user %]
+  [% endfor %]
 </div>
 
 <hr>
 
-<p>{ % if site.repo_trophies.enabled % }
-{ % for user in site.data.repositories.github_users % }
-  { % if site.data.repositories.github_users.size &gt; 1 % }</p>
+<p>[% if site.repo_trophies.enabled %]
+[% for user in site.data.repositories.github_users %]
+  [% if site.data.repositories.github_users.size &gt; 1 %]</p>
 <h4></h4>
-<p>{ % endif % }</p>
+<p>[% endif %]</p>
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  { % include repository/repo_trophies.html username=user % }
+  [% include repository/repo_trophies.html username=user %]
   </div>
 
 <hr>
 
-<p>{ % endfor % }
-{ % endif % }
-{ % endif % }</p>
+<p>[% endfor %]
+[% endif %]
+[% endif %]</p>
 
 <h2 id="github-repositories">GitHub Repositories</h2>
 
-<p>{ % if site.data.repositories.github_repos % }</p>
+<p>[% if site.data.repositories.github_repos %]</p>
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  { % for repo in site.data.repositories.github_repos % }
-    { % include repository/repo.html repository=repo % }
-  { % endfor % }
+  [% for repo in site.data.repositories.github_repos %]
+    [% include repository/repo.html repository=repo %]
+  [% endfor %]
 </div>
-<p>{ % endif % }</p>
+<p>[% endif %]</p>
 
           </article>
 
@@ -71,17 +71,17 @@
     </div>
 
     <!-- Footer -->
-    { %- include footer.html % }
+    [%- include footer.html %]
 
     <!-- JavaScripts -->
-    { % include scripts/jquery.html % }
-    { % include scripts/bootstrap.html % }
-    { % include scripts/masonry.html % }
-    { % include scripts/misc.html % }
-    { % include scripts/badges.html % }
-    { % include scripts/mathjax.html % }
-    { % include scripts/analytics.html % }
-    { % include scripts/progressBar.html % }
+    [% include scripts/jquery.html %]
+    [% include scripts/bootstrap.html %]
+    [% include scripts/masonry.html %]
+    [% include scripts/misc.html %]
+    [% include scripts/badges.html %]
+    [% include scripts/mathjax.html %]
+    [% include scripts/analytics.html %]
+    [% include scripts/progressBar.html %]
   
 </body>
 </html>
