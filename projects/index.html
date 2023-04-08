@@ -135,50 +135,147 @@
           <article>
             <!-- pages/projects.md -->
 <div class="projects">
-[%- if site.enable_project_categories and page.display_categories %]
   <!-- Display categorized projects -->
-  [%- for category in page.display_categories %]
-  <h2 class="category"></h2>
-  [%- assign categorized_projects = site.projects | where: "category", category -%]
-  [%- assign sorted_projects = categorized_projects | sort: "importance" %]
+  <h2 class="category">work</h2>
   <!-- Generate cards for each project -->
-  [% if page.horizontal -%]
-  <div class="container">
-    <div class="row row-cols-2">
-    [%- for project in sorted_projects -%]
-      [% include projects_horizontal.html %]
-    [%- endfor %]
-    </div>
-  </div>
-  [%- else -%]
   <div class="grid">
-    [%- for project in sorted_projects -%]
-      [% include projects.html %]
-    [%- endfor %]
-  </div>
-  [%- endif -%]
-  [% endfor %]
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/1_project/">
+      <div class="card hoverable">
+<figure>
 
-[%- else -%]
-<!-- Display projects without categories -->
-  [%- assign sorted_projects = site.projects | sort: "importance" -%]
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/12.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">project 1</h2>
+          <p class="card-text">a project with a background image</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/2_project/">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/3.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">project 2</h2>
+          <p class="card-text">a project with a background image</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="https://unsplash.com" rel="external nofollow noopener" target="_blank">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/7.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">project 3</h2>
+          <p class="card-text">a project that redirects to another website</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+  </div>
+  <h2 class="category">fun</h2>
   <!-- Generate cards for each project -->
-  [% if page.horizontal -%]
-  <div class="container">
-    <div class="row row-cols-2">
-    [%- for project in sorted_projects -%]
-      [% include projects_horizontal.html %]
-    [%- endfor %]
-    </div>
-  </div>
-  [%- else -%]
   <div class="grid">
-    [%- for project in sorted_projects -%]
-      [% include projects.html %]
-    [%- endfor %]
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/4_project/">
+      <div class="card hoverable">
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">project 4</h2>
+          <p class="card-text">another without an image</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/5_project/">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/1.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">project 5</h2>
+          <p class="card-text">a project with a background image</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/6_project/">
+      <div class="card hoverable">
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">project 6</h2>
+          <p class="card-text">a project with no image</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
   </div>
-  [%- endif -%]
-[%- endif -%]
 </div>
 
           </article>
