@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Movie Recommendation System
-description: the project of lesson 'MLAI' 
-img: assets/img/1.jpg
+title: ML Music
+description: composing music using genetic algorithm
+img:
 importance: 3
-category: fun
+category: work
 ---
 
 Every project has a beautiful feature showcase page.
