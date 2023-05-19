@@ -2,7 +2,7 @@
 layout: page
 title: GPA Miner
 description: a self-defined game
-img:
+img: assets/img/gpaminer.png
 importance: 3
 category: work
 ---

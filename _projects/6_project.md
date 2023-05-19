@@ -2,7 +2,7 @@
 layout: page
 title: A Platform for Reading and Sharing
 description: the project of PKU chanllenge Cup
-img:
+img: assets/img/cup.png
 importance: 3
 category: work
 ---
