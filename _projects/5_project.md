@@ -4,7 +4,7 @@ title: Movie Recommendation System
 description: the project of lesson 'MLAI' 
 img: assets/img/1.jpg
 importance: 3
-category: fun
+category: work
 ---
 
 Every project has a beautiful feature showcase page.
