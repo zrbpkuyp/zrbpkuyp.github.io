@@ -2,7 +2,7 @@
 layout: page
 title: Chinese Standard Mahjong
 description: a Mahjong bot using supervised learning
-img: assets/img/3.jpg
+img: assets/img/mahjong.jpg
 importance: 2
 category: work
 ---

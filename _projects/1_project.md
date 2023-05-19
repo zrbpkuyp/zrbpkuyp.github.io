@@ -2,7 +2,7 @@
 layout: page
 title: NoGo
 description: a NoGo bot using MCTS   
-img: assets/img/11.jpg
+img: assets/img/go.jpg
 importance: 1
 category: work
 ---

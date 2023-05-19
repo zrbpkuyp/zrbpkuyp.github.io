@@ -2,7 +2,7 @@
 layout: page
 title: Movie Recommendation System
 description: the project of lesson 'MLAI' 
-img: assets/img/1.jpg
+img: assets/img/movie.jpg
 importance: 3
 category: work
 ---

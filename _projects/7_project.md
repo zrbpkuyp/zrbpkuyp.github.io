@@ -2,7 +2,7 @@
 layout: page
 title: ML Music
 description: composing music using genetic algorithm
-img:
+img: assets/img/music.jpg
 importance: 3
 category: work
 ---
