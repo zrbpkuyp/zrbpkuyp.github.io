@@ -192,41 +192,41 @@ Below is something about it.
 </div>
 
 <div class="caption">
-    This is the frame work of MCTS method, for more information, you can go to [CSDN](https://blog.csdn.net/weixin_45828785/article/details/102879695)
+    This is the frame work of MCTS method, for more information, you can go to <a href="https://blog.csdn.net/weixin_45828785/article/details/102879695" rel="external nofollow noopener" target="_blank">CSDN</a>
 </div>
 
-<p>```Python</p>
-<h1 id="examine-whether-the-location-is-in-board-return-true-or-false">examine whether the location is in board, return True or False</h1>
-<p>def in_board(x, y)</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># examine whether the location is in board, return True or False
+</span><span class="k">def</span> <span class="nf">in_board</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> 
 
-<h1 id="build-the-monte-carlo-tree">build the monte carlo tree</h1>
-<p>class TreeNode:
-    # init the basic varibles
-    def <strong>init</strong>(self, _parent, _board, _color)
-    # examine whether the piece has air
-    def dfs_air(self, fx, fy)
-    # judge whether the location is available
-    def judge_available(self, fx, fy, col)
-    # return all the actions that are available
-    def get_valid_action(self)</p>
+<span class="c1"># build the monte carlo tree
+</span><span class="k">class</span> <span class="nc">TreeNode</span><span class="p">:</span>
+    <span class="c1"># init the basic varibles
+</span>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">_parent</span><span class="p">,</span> <span class="n">_board</span><span class="p">,</span> <span class="n">_color</span><span class="p">)</span>
+    <span class="c1"># examine whether the piece has air
+</span>    <span class="k">def</span> <span class="nf">dfs_air</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">)</span>
+    <span class="c1"># judge whether the location is available
+</span>    <span class="k">def</span> <span class="nf">judge_available</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span>
+    <span class="c1"># return all the actions that are available
+</span>    <span class="k">def</span> <span class="nf">get_valid_action</span><span class="p">(</span><span class="n">self</span><span class="p">)</span>
 
-<h1 id="choose-the-best-child-return-the-node-of-the-best-child">choose the best child, return the node of the best child</h1>
-<p>def best_child(node)</p>
+<span class="c1"># choose the best child, return the node of the best child
+</span><span class="k">def</span> <span class="nf">best_child</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 
-<h1 id="expand-the-child-return-the-new-node-just-expended">expand the child, return the new node just expended</h1>
-<p>def expand(node)</p>
+<span class="c1"># expand the child, return the new node just expended
+</span><span class="k">def</span> <span class="nf">expand</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 
-<h1 id="give-a-certain-score-based-on-the-current-situation-return-the-score">give a certain score based on the current situation, return the score</h1>
-<p>def default_policy(node)</p>
+<span class="c1"># give a certain score based on the current situation, return the score
+</span><span class="k">def</span> <span class="nf">default_policy</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 
-<h1 id="give-the-score-to-its-parent-do-not-return">give the score to its parent, do not return</h1>
-<p>def backup(node, r)</p>
+<span class="c1"># give the score to its parent, do not return
+</span><span class="k">def</span> <span class="nf">backup</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
 
-<h1 id="the-combination-of-choosing-the-best-child-and-expend">the combination of choosing the best child and expend</h1>
-<p>def tree_policy(node)</p>
+<span class="c1"># the combination of choosing the best child and expend
+</span><span class="k">def</span> <span class="nf">tree_policy</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 
-<h1 id="combination-of-the-whole-process">combination of the whole process</h1>
-<p>def monte_carlo_tree_search(node)</p>
+<span class="c1"># combination of the whole process
+</span><span class="k">def</span> <span class="nf">monte_carlo_tree_search</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+</code></pre></div></div>
 
 
           </article>
