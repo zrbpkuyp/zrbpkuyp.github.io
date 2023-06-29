@@ -17,13 +17,13 @@ category: work
 Below is one game I (white side) played with the AI master (black side).
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/nogo_01.jpg" title="nogo beginning" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/nogo_01.png" title="nogo beginning" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/nogo_02.jpg" title="nogo middle" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/nogo_02.png" title="nogo middle" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/nogo_03.jpg" title="nogo endding" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/nogo_03.png" title="nogo ending" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -47,7 +47,7 @@ The code has been uploaded to [github](https://github.com/zrbpkuyp/NoGo). Below 
 
 
 {% raw %}
-```python
+```Python
 # examine whether the location is in board, return True or False
 def in_board(x, y) 
 
