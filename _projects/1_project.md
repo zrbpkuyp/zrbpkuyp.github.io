@@ -42,12 +42,12 @@ The code has been uploaded to [github](https://github.com/zrbpkuyp/NoGo). Below 
 </div>
 
 <div class="caption">
-    This is the frame work of MCTS method, for more information, you can go to [CSDN](https://blog.csdn.net/weixin_45828785/article/details/102879695)
+    This is the frame work of MCTS method, for more information, you can go to <a href='https://blog.csdn.net/weixin_45828785/article/details/102879695'>CSDN</a>
 </div>
 
 
 {% raw %}
-```Python
+```python
 # examine whether the location is in board, return True or False
 def in_board(x, y) 
 
@@ -79,5 +79,6 @@ def tree_policy(node)
 
 # combination of the whole process
 def monte_carlo_tree_search(node)
+```
 
 {% endraw %}
