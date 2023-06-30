@@ -12,8 +12,8 @@ category: work
     GPA miner
     ---
 
-<div>
-    <video>
-        <source src='assets/img/miner_01.mp4'></source>
-    </video>
-</div>
+
+
+<video src='assets/img/miner_01.mp4'></video>
+
+11
