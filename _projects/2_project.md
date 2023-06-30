@@ -8,10 +8,13 @@ category: work
 ---
 
     ---
-    This is one of the projects of Introduction to AI - building an AI master that can play Chinese Standard Mahjong.
-    Thanks to mentor Wenxin Li and TA Yunlong Lu, with the training data and code framework they provided, I try to train my own AI.
-    My AI is mainly based on supervised learning, and I make efforts on reinforcement learning, but it doesn't work well.
-    The project is tested on [Botzone](https://botzone.org.cn/)
+    This is one of the projects of Introduction to AI 
+       -- building an AI master that can play Chinese Standard Mahjong.
+    Thanks to mentor Wenxin Li and TA Yunlong Lu, 
+       with the training data and code framework they provided, I try to train my own AI.
+    My AI is mainly based on supervised learning, 
+       and I make efforts on reinforcement learning, but it doesn't work well.
+    The project is tested on Botzone.
     ---
 
 Below is one game on Botzone.
@@ -27,8 +30,15 @@ Below is one game on Botzone.
     </div>
 </div>
 <div class="caption">
-    Each choice should be made in one seconds.
+    click <a href='https://botzone.org.cn/'>here</a> to go to Botzone!
 </div>
+
+I use ResNet neural network, and after many experiments, I choose 34 features finally. 
+Each feature has the shape of 4*9: 
+Features 1-2 record the 'Men, Quan Wind' information; 
+Features 3-6 record the player's(self) current hand;
+Features 7-22 record the four players' history;
+Features 23-34 record the other three players' situation of Chi, Pong, Kong.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -36,27 +46,31 @@ Below is one game on Botzone.
     </div>
 </div>
 <div class="caption">
-    Each choice should be made in one seconds.
+    This is the form of 34 features.
 </div>
 
+The following is the test accuracy of supervised learning using different features. We can see that 34 features is the best choice based on
+the performance and space overhead.
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/test_02.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Each choice should be made in one seconds.
+    Test accuracy of different features.
 </div>
 
+But higher accuracy doesn't mean the model is stronger. I've made some comparison on Botzone to test their practical effects.
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/test_03.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Each choice should be made in one seconds.
+    Practical effects of different models with different test accuracy.
 </div>
 
+Below is the code framework of ResNet. The whole code is uploaded to <a href='https://github.com/zrbpkuyp/Chinese-Standard-Mahjong'>github<a>.
 {% raw %}
 
 ```python
