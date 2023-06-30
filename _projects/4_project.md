@@ -14,6 +14,6 @@ category: work
 
 
 
-<video src='assets/img/publication_preview/brownian-motion.gif'></video>
+<img src='assets/img/publication_preview/brownian-motion.gif'></img>
 
 11
