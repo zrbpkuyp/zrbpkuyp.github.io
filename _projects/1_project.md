@@ -8,7 +8,7 @@ category: work
 ---
 
     ---
-    This is one of final project of Computing Generality A. 
+    This is the final project of Computing Generality A. 
     Actually, it's not the one when I took the lesson. 
     But I have a great interest in it, so I have a simple try using the method MCTS.
     Below is something about it.
