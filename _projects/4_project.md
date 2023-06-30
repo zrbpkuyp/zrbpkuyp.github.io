@@ -14,6 +14,6 @@ category: work
 
 
 
-<video src='assets/img/miner_01.mp4'></video>
+<video src='assets/img/publication_preview/brownian-motion.gif'></video>
 
 11
