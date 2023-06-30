@@ -12,7 +12,7 @@ category: work
     GPA miner
     ---
 
-<div class="row">
+<div>
     <video>
         <source src='assets/img/miner_01.mp4'></source>
     </video>

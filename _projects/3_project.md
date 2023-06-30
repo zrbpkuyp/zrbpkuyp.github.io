@@ -3,7 +3,6 @@ layout: page
 title: PKU nohelper
 description: a Qt procedure for pku students
 img: assets/img/pkunohelper.png
-# redirect: https://unsplash.com
 importance: 3
 category: work
 ---
