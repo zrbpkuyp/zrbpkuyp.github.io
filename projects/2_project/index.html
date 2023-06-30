@@ -113,10 +113,13 @@
 
           <article>
             <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-This is one of the projects of Introduction to AI - building an AI master that can play Chinese Standard Mahjong.
-Thanks to mentor Wenxin Li and TA Yunlong Lu, with the training data and code framework they provided, I try to train my own AI.
-My AI is mainly based on supervised learning, and I make efforts on reinforcement learning, but it doesn't work well.
-The project is tested on [Botzone](https://botzone.org.cn/)
+This is one of the projects of Introduction to AI 
+   -- building an AI master that can play Chinese Standard Mahjong.
+Thanks to mentor Wenxin Li and TA Yunlong Lu, 
+   with the training data and code framework they provided, I try to train my own AI.
+My AI is mainly based on supervised learning, 
+   and I make efforts on reinforcement learning, but it doesn't work well.
+The project is tested on Botzone.
 ---
 </code></pre></div></div>
 
@@ -166,8 +169,15 @@ The project is tested on [Botzone](https://botzone.org.cn/)
     </div>
 </div>
 <div class="caption">
-    Each choice should be made in one seconds.
+    click <a href="https://botzone.org.cn/" rel="external nofollow noopener" target="_blank">here</a> to go to Botzone!
 </div>
+
+<p>I use ResNet neural network, and after many experiments, I choose 34 features finally. 
+Each feature has the shape of 4*9: 
+Features 1-2 record the ‘Men, Quan Wind’ information; 
+Features 3-6 record the player’s(self) current hand;
+Features 7-22 record the four players’ history;
+Features 23-34 record the other three players’ situation of Chi, Pong, Kong.</p>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -186,9 +196,11 @@ The project is tested on [Botzone](https://botzone.org.cn/)
     </div>
 </div>
 <div class="caption">
-    Each choice should be made in one seconds.
+    This is the form of 34 features.
 </div>
 
+<p>The following is the test accuracy of supervised learning using different features. We can see that 34 features is the best choice based on
+the performance and space overhead.</p>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         <figure>
@@ -206,9 +218,10 @@ The project is tested on [Botzone](https://botzone.org.cn/)
     </div>
 </div>
 <div class="caption">
-    Each choice should be made in one seconds.
+    Test accuracy of different features.
 </div>
 
+<p>But higher accuracy doesn’t mean the model is stronger. I’ve made some comparison on Botzone to test their practical effects.</p>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         <figure>
@@ -226,8 +239,10 @@ The project is tested on [Botzone](https://botzone.org.cn/)
     </div>
 </div>
 <div class="caption">
-    Each choice should be made in one seconds.
+    Practical effects of different models with different test accuracy.
 </div>
+
+<p>Below is the code framework of ResNet. The whole code is uploaded to <a href="https://github.com/zrbpkuyp/Chinese-Standard-Mahjong" rel="external nofollow noopener" target="_blank">github</a><a>.</a></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ResNet 18
 # Input is a dict, input_dict["obs"]["observation"](shape:34*4*9) is what we need
