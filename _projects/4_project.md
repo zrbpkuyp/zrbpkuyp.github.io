@@ -14,6 +14,10 @@ category: work
 
 
 
-<img src='assets/img/publication_preview/brownian-motion.gif' />
+<img src='/workspaces/zrbpkuyp.github.io/assets/img/publication_preview/brownian-motion.gif' />
+
+<img src='/workspaces/zrbpkuyp.github.io/assets/img/1.jpg' />
+
+<img src='assets/img/1.jpg' />
 
 22
