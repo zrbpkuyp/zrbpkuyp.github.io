@@ -10,7 +10,6 @@ category: work
 
     ---
     GPA miner is the final project of AI Game class.
-    
     ---
 
 Below are three versions of AI, using different strategies.
@@ -29,4 +28,4 @@ Below are three versions of AI, using different strategies.
     EASY | MIDDLE | DIFFICULT
 </div>
 
-test
+Qt test
