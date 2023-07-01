@@ -24,13 +24,22 @@ category: work
         {% include figure.html path="assets/img/qt_register.png" title="register" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/qt_homepage.png" title="homepage" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/qt_notice.png" title="notice" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
     ---
     FUNCTIONS
     ---
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/qt_homepage.png" title="homepage" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Homepage
+</div>
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/qt_treehole.png" title="treehole" class="img-fluid rounded z-depth-1" %}
