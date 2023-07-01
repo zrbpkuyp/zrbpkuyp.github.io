@@ -3,6 +3,7 @@ layout: page
 title: A Platform for Reading and Sharing
 description: the project of PKU chanllenge Cup
 img: assets/img/cup.png
+redirect: https://zrbpkuyp.github.io/assets/pdf/cup.pdf
 importance: 3
 category: work
 ---
