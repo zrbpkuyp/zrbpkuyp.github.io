@@ -15,13 +15,13 @@ category: work
 Basic Settings:
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/miner_rule.jpg" title="rule" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/miner_rule.png" title="rule" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/miner_item.jpg" title="item" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/miner_item.png" title="item" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -57,7 +57,8 @@ Below are three versions of AI, using different strategies.
     ---
     DIFFICULT:
     1. Include 'middle' strategies.
-    2. use an value function to determine which item to get first, based on the item's value and the time to get it.
+    2. use an value function to determine which item to get first, 
+       based on the item's value and the time to get it.
     3. Tell whether the item can be reached first by the other player, if so, drop it.
     ---
 
